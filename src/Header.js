@@ -1,9 +1,13 @@
 function Header () {
     return (
     <div className="header">
-        <button><span>&#9776;</span></button>
-        <h1>Lotion</h1>
-        <p>Like Notion, but worse</p>
+        <div className="head" id="button">
+            <button><span>&#9776;</span></button>
+        </div>
+        <div className="head" id="title">
+            <h1>Lotion</h1>
+            <p>Like Notion, but worse</p>
+        </div>
     </div>
     );
 }
