@@ -1,5 +1,10 @@
+import Header from './Header';
 function App() {
-  return <h1>Lotion</h1>;
+  return (
+    <div className='App'>
+      <Header />
+    </div>
+  );
 }
 
 export default App;
