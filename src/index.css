@@ -59,11 +59,9 @@ button{
 }
 
 .main_container {
-  background-color: green;
   margin: 5px;
   padding: 10px;
   border: 1px solid black;
-  color: white;
   flex-basis: 85%;
 }
 
