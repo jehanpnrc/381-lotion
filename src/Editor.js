@@ -1,13 +1,21 @@
-import {useQuill} from 'react-quill';
-import 'quill/dist/quill.snow.css';
+import React, { useEffect } from 'react';
+import ReactQuill, { useQuill } from 'react-quill';
 
 function Editor() {
-    const { quill, quillRef } = useQuill;
+
+      
     return (
-        <div>
-            <div style ={{width: 500, height: 300}}>
-                <div ref={quillRef} />
+        <div className='main_container'>
+            <div className='title_area'>
+                <input type='text' id='title'/>
+                <button className ='note_button'>Save</button>
+                <button className='note_button'>Delete</button>
             </div>
+
+            <div className='text_area'>
+              <ReactQuill></ReactQuill>
+            </div>
+        
         </div>
     );
 }
