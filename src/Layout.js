@@ -17,7 +17,7 @@ function Layout() {
         <div className="container">
                 <Sidebar />
             
-                <Editor />
+                <Main />
                 
             
             </div>

@@ -121,3 +121,15 @@ input {
   display: flex;
   flex-direction: column;
 }
+
+.empty_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.empty_notes {
+  text-align: center;
+}
