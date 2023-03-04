@@ -109,8 +109,9 @@ button{
 input {
   border: none;
   padding: 10px 0;
-  text-align: left !important;
+  text-align: left;
   font-size: 25px;
+  flex-basis: 85%;
 }
 
 .note_button {
@@ -132,4 +133,12 @@ input {
 
 .empty_notes {
   text-align: center;
+}
+
+.text_area {
+  border-top: 1px solid rgb(172, 168, 168);
+}
+
+.title_pp {
+  flex-basis: 95%;
 }

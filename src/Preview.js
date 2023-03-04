@@ -1,23 +1,18 @@
-import React, { useEffect } from 'react';
-import ReactQuill, { useQuill } from 'react-quill';
-
-function Editor() {
-
-      
+function Preview() {
     return (
         <div className='main_container'>
             <div className='title_area'>
-                <input type='text' className='title'/>
-                <button className ='note_button'>Save</button>
+                <p className="title_pp">Title</p>
+                <button className ='note_button'>Edit</button>
                 <button className='note_button'>Delete</button>
             </div>
                 <small>Date</small>
             <div className='text_area'>
-              <ReactQuill></ReactQuill>
+              text
             </div>
         
         </div>
     );
 }
 
-export default Editor;
+export default Preview;

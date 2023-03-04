@@ -1,6 +1,8 @@
 import Sidebar from './Sidebar';
 import Editor from './Editor';
 import Main from './Main';
+import Preview from './Preview';
+import ReactQuill from 'react-quill';
 
 function Layout() {
     return (
@@ -17,7 +19,7 @@ function Layout() {
         <div className="container">
                 <Sidebar />
             
-                <Main />
+                <Preview />
                 
             
             </div>
