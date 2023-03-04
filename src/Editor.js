@@ -11,7 +11,7 @@ function Editor() {
                 <button className ='note_button'>Save</button>
                 <button className='note_button'>Delete</button>
             </div>
-
+                <small>Date</small>
             <div className='text_area'>
               <ReactQuill></ReactQuill>
             </div>

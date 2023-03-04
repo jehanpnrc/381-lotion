@@ -6,7 +6,7 @@ function Sidebar() {
         <div id="notes_header">
           <div id='notes_header_contents'>
             <h2>Notes</h2>
-            <button>+</button>
+            <button className='add_note'>+</button>
           </div>
           
         </div>

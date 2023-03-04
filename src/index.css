@@ -117,3 +117,7 @@ input {
   font-size: 20px;
 }
 
+.title_date {
+  display: flex;
+  flex-direction: column;
+}
