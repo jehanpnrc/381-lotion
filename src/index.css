@@ -22,7 +22,7 @@ a {
 .header {
   display: flex;
   border-bottom: 1px solid rgb(172, 168, 168);
-  border-top: 2px solid violet;
+  border-top: 2px solid rgb(76, 67, 114);
 }
 
 .head {
@@ -111,7 +111,7 @@ input {
   padding: 10px 0;
   text-align: left;
   font-size: 25px;
-  flex-basis: 85%;
+  flex-basis: 93%;
 }
 
 .note_button {
@@ -130,7 +130,6 @@ input {
   height: 100vh;
 }
 
-
 .empty_notes {
   text-align: center;
 }
@@ -141,4 +140,15 @@ input {
 
 .title_pp {
   flex-basis: 95%;
+}
+
+.sidebar_note:hover {
+  background: #ddd;
+  cursor: pointer;
+}
+
+.sidebar_note.active {
+  background: rgb(76, 67, 114);
+  color: white;
+
 }
