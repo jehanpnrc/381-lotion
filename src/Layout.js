@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
 import Sidebar from './Sidebar';
-import Editor from './Editor';
-import Main from './Main';
-import Preview from './Preview';
-import ReactQuill from 'react-quill';
 import { Outlet } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from "react-router-dom";

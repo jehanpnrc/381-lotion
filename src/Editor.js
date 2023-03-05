@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import ReactQuill, { useQuill } from 'react-quill';
 import { useOutletContext } from "react-router-dom";
+import Main from './Main';
 
 function Editor() {
     const activeNote = useOutletContext();
+    if(!activeNote) return <Main />
       
     return (
         <div className='main_container'>
