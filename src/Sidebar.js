@@ -18,7 +18,7 @@ function Sidebar({ notes, onAddNote, activeNote, setActiveNote }) {
              >
              <div className='sidebar_title'>
                <strong>{note.title}</strong>
-               <small className='note-preview'>{note.body && note.body.substring(0,100) + "..."}</small>
+               <small className='note-preview'>{note.body && new DOMParser().parseFromString(note.body, 'text/html').body.textContent.substring(0,100) + "..."}</small>
                <small className='note-meta'>
                 {new Date(note.lastModified).toLocaleDateString("eg-GB", {
                   year: "numeric",
@@ -33,9 +33,6 @@ function Sidebar({ notes, onAddNote, activeNote, setActiveNote }) {
            </div>
 
           ))}
-         
-
-      
 
         </div>
       </div>

@@ -25,6 +25,18 @@ function Layout() {
         return notes.find((note) => note.id === activeNote);
     };
 
+    const onUpdateNote = (updatedNote) => {
+        const updatedNotesArray = notes.map((note) => {
+        if(note.id === activeNote){
+            return updatedNote
+        }    
+
+        return note;
+        
+    });
+        setNotes(updatedNotesArray);
+    }
+
     return (
         <div className="App">
         <div className="header">
@@ -45,7 +57,7 @@ function Layout() {
 
             />
             
-            {getActiveNote() && <Outlet context={getActiveNote()} />}
+            {getActiveNote() && <Outlet context={[getActiveNote(), onUpdateNote]} />}
             
                 
                 
