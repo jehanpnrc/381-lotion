@@ -12,7 +12,8 @@ function Sidebar({ notes, onAddNote, activeNote, setActiveNote }) {
         </div>
         <div id="notes_list">
           {notes.map((note) => (
-             <div key={note.id} 
+             <div  
+             key={note.id}
              className={`sidebar_note ${note.id === activeNote && "active"}`}
              onClick={() => setActiveNote(note.id)}
              >
