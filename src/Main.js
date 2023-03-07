@@ -1,7 +1,7 @@
 import { useOutletContext } from "react-router-dom";
 
 function Main () {
-    const activeNote = useOutletContext();
+    const [activeNote, onUpdateNote] = useOutletContext();
     
     return (
         <div className="main_container">
