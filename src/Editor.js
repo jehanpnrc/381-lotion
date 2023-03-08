@@ -6,6 +6,7 @@ import Main from './Main';
 import { useNavigate } from "react-router-dom";
 
 function Editor() {
+  
   const [activeNote, onUpdateNote, onDeleteNote, notes] = useOutletContext();
   const [noteChanges, setNoteChanges] = useState(activeNote);
   const navigate = useNavigate(); // Navigation function from React Router

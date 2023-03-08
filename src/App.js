@@ -6,13 +6,13 @@ import Preview from './Preview';
 import Layout from './Layout';
 
 function App() {
-  
+
 
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout/>}>
-          <Route path="/notes" element={<Main/>}></Route>
+          <Route path="/" element={<Main/>}></Route>
           <Route path="/notes/:place" element={<Preview/>}></Route>
           <Route path="/notes/:place/edit" element={<Editor/>}></Route>
 
