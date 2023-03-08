@@ -103,7 +103,7 @@ function Layout() {
 
         {/* Active note editor component */}
         {getActiveNote() && (
-          <Outlet context={[getActiveNote(), onUpdateNote, onDeleteNote]} />
+          <Outlet context={[getActiveNote(), onUpdateNote, onDeleteNote, notes]} />
         )}
       </div>
     </div>

@@ -118,6 +118,16 @@ input {
   font-size: 20px;
 }
 
+.note_button:hover {
+  background: rgb(76, 67, 114);
+  color: white;
+}
+
+.add_button:hover {
+  background: rgb(76, 67, 114);
+  color: white;
+}
+
 .title_date {
   display: flex;
   flex-direction: column;
@@ -150,7 +160,6 @@ input {
 .sidebar_note.active {
   background: rgb(76, 67, 114);
   color: white;
-
 }
 
 #body{
