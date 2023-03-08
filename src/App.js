@@ -13,8 +13,8 @@ function App() {
       <Routes>
         <Route element={<Layout/>}>
           <Route path="/notes" element={<Main/>}></Route>
-          <Route path="/notes/preview" element={<Preview/>}></Route>
-          <Route path="/notes/preview/edit" element={<Editor/>}></Route>
+          <Route path="/notes/:place" element={<Preview/>}></Route>
+          <Route path="/notes/:place/edit" element={<Editor/>}></Route>
 
 
 

@@ -26,6 +26,7 @@ function Editor() {
   // It calls the onUpdateNote function passed down via context, passing in the updated note object
   const onSaveNote = () => {
     onUpdateNote(noteChanges);
+    navigate(`/notes/${activeNote.place}`);
     console.log(activeNote.id);
   };
 

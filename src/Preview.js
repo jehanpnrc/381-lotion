@@ -5,7 +5,7 @@ function Preview() {
     return (
         <div className='main_container'>
             <div className='title_area'>
-                <p className="title_pp">{activeNote.title}</p>
+                <h2 className="title_pp">{activeNote.title}</h2>
                 <button className ='note_button'>Edit</button>
                 <button className='note_button'>Delete</button>
             </div>

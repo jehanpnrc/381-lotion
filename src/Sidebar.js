@@ -1,6 +1,12 @@
 import React, { } from 'react';
+import { useNavigate, useParams } from "react-router-dom";
+
 
 function Sidebar({ notes, onAddNote, activeNote, setActiveNote }) {
+  const navigate = useNavigate(); // Navigation function from React Router
+
+  const {place} = useParams();
+
     return (
       <div className="sidebar_container">
         <div id="notes_header">
@@ -15,7 +21,11 @@ function Sidebar({ notes, onAddNote, activeNote, setActiveNote }) {
              <div  
              key={note.id}
              className={`sidebar_note ${note.id === activeNote && "active"}`}
-             onClick={() => setActiveNote(note.id)}
+             onClick={() => {
+              setActiveNote(note.id);
+              navigate(`/notes/${notes.indexOf(note) + 1}`);
+
+            }}
              >
              <div className='sidebar_title'>
                <strong>{note.title}</strong>
