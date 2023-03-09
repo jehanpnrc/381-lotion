@@ -47,19 +47,20 @@ function Editor() {
 const onCalendarDateChange = (e) => {
   const newDate = new Date(e.target.value);
   const formattedDate = formatDate(newDate);
-  const updatedNote = {
-    ...activeNote,
+  setNoteChanges({
+    ...noteChanges,
     lastModified: formattedDate,
-  };
-  onUpdateNote(updatedNote);
+  });
 };
 
 const formatDate = (when) => {
-    const formatted = new Date(when).toLocaleString("en-US", options);
-    if (formatted === "Invalid Date") {
-        return "";
-    }
-    return formatted;
+  const date = new Date(when);
+  const year = date.getFullYear();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
+  const hours = date.getHours().toString().padStart(2, '0');
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+  return `${year}-${month}-${day}T${hours}:${minutes}`;
 };
 
   // If there is no active note, return a Main component
@@ -108,10 +109,8 @@ const formatDate = (when) => {
           className='date-picker'
           type="datetime-local"
           value={formatDate(noteChanges.lastModified)}
-          onChange={(e) => {
-            onCalendarDateChange(new Date(e.target.value))
-          }
-            }
+          onChange={onCalendarDateChange}
+            
         />
       </small>
       {/* This ReactQuill component allows the user to edit the note body */}
